@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-// import { render } from 'react-dom';
 
 
 class Support extends Component{
@@ -7,7 +6,7 @@ class Support extends Component{
         return(
             <div>
                 <h1>How well are you being supported?</h1>
-                <label for ="support">Support?</label> <br/>
+                <label>Support?</label> <br/>
                 <select id="support">
                     <option value="5">5</option>
                     <option value="4">4</option>

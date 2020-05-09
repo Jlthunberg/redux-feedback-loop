@@ -1,6 +1,4 @@
 import React, { Component } from "react";
-// import { render } from 'react-dom';
-
 
 class Feeling extends Component {
     render() {
@@ -8,7 +6,7 @@ class Feeling extends Component {
             <div>
                 <h1>How are you feeling today?</h1>
 
-                <label for ="feeling">Feeling?</label> <br/>
+                <label>Feeling?</label> <br />
                 <select id="feeling">
                     <option value="5">5</option>
                     <option value="4">4</option>
@@ -16,6 +14,9 @@ class Feeling extends Component {
                     <option value="2">2</option>
                     <option value="1">1</option>
                 </select>
+                
+                <br/>
+                <button>NEXT</button>
             </div>
         ) //end return
     } //end render
