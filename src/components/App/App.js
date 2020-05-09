@@ -7,12 +7,14 @@ import Understanding from '../Understanding/Understanding';
 import Support from '../Support/Support';
 import Comments from '../Comments/Comments';
 import Overview from '../Overview/Overview';
-import { HashRouter, Route, Link } from 'react-router-dom';
+import { HashRouter, Route } from 'react-router-dom';
 
 class App extends Component {
   componentDidMount(){
     console.log('in mount:')
-  }
+  }//end handle click
+
+
 
   render() {
     return (
