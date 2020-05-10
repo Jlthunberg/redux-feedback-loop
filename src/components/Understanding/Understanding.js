@@ -13,20 +13,17 @@ class Understanding extends Component{
 
     handleClick = () => {
         console.log('clicked next in understanding')
-        // if(this.state.understanding == ''){
-        //     //do this thing
-        //     this.props.dispatch({
-        //         type: 'NEW_UNDERSTANDING',
-        //         payload: this.state.understanding,
-        //     })  
-        // }
+        if(this.state.understanding === ''){
+            alert('Please choose a value from 1-5, then press Next. Thank you');
+            // do this thing
+            } else if (this.state.understanding > 0){
+                this.props.dispatch({
+                    type: 'NEW_UNDERSTANDING',
+                    payload: this.state.understanding,
+                })
+                this.props.history.push('/support')
+            }  
 
-        this.props.dispatch({
-            type: 'NEW_UNDERSTANDING',
-            payload: this.state.understanding,
-        })
-
-        this.props.history.push('/support')
       }//end handle click
 
 
@@ -46,6 +43,7 @@ class Understanding extends Component{
                 <h1>How well are you understanding the content?</h1>
                 <label>Understanding?</label> <br/>
                 <select value={this.state.understanding} onChange={this.handleChange}>
+                    <option value="">Understanding?</option>
                     <option value="5">5</option>
                     <option value="4">4</option>
                     <option value="3">3</option>

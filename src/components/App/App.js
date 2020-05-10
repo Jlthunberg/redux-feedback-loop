@@ -32,7 +32,7 @@ class App extends Component {
           <Route path="/understanding" render={ (props) => <Understanding {...props} dispatch={this.props.dispatch}/>} />
           <Route path="/support" render={ (props) => <Support {...props} dispatch={this.props.dispatch}/>} />
           <Route path="/comments" render={ (props) => <Comments {...props} dispatch={this.props.dispatch}/>} />
-          <Route path="/overview" render={ (props) => <Overview {...props} dispatch={this.props.dispatch}/>} />
+          <Route path="/overview" render={ (props) => <Overview {...props} dispatch={this.props.dispatch} reduxState={this.props.reduxState}/>} />
           <Route path="/thanks" render={ (props) => <Thanks {...props} dispatch={this.props.dispatch}/>} />
         </HashRouter>
       </div>

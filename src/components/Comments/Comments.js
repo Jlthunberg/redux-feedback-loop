@@ -34,7 +34,7 @@ class Comments extends Component {
     } //end handle click
 
     render() {
-        console.log('comments:', this.state.comments)
+        console.log('comments:', this.state.comments);
         return (
             <div>
                 <h1>Any additional comments or concerns can be entered here.</h1>

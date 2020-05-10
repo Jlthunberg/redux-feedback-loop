@@ -4,10 +4,19 @@ import React, { Component } from "react";
 
 
 class Thanks extends Component{
+
+    handleClick = () => {
+        console.log('in handleclick overview')
+        this.props.history.push('/')
+    } //end handle click
+
+
     render(){
         return(
             <div>
-                <h1>Thanks</h1>
+                <h1>Thank you for your Feedback!</h1>
+                <br/>
+                <button onClick={this.handleClick}>Submit New Feedback</button>
             </div>
         ) //end return
     } //end render
