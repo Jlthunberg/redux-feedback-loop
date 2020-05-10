@@ -18,13 +18,6 @@ class Comments extends Component {
     }
 
     handleClick = () => {
-        // if(this.state.comments == ''){
-        // this.props.dispatch({
-        //     type: 'NEW_COMMENT',
-        //     payload: this.state.comments,
-        // })
-        // }
-
         this.props.dispatch({
             type: 'NEW_COMMENT',
             payload: this.state.comments,

@@ -21,12 +21,6 @@ class Feeling extends Component {
             }) 
             this.props.history.push('/understanding') 
         }
-        // this.props.dispatch({
-        //     type: 'NEW_FEELING',
-        //     payload: this.state.feeling,
-        // }) 
-
-        // this.props.history.push('/understanding') //sends to next page understanding question
       }//end handle click
 
     handleChange = (event) =>{
