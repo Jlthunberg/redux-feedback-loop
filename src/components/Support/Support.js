@@ -1,5 +1,8 @@
 import React, { Component } from "react";
 import {Button} from '@material-ui/core/';
+import FormControl from '@material-ui/core/FormControl';
+import Select from '@material-ui/core/Select';
+import MenuItem from '@material-ui/core/MenuItem';
 
 class Support extends Component {
     state = {
@@ -45,14 +48,16 @@ class Support extends Component {
             <div>
                 <h1>How well are you being supported?</h1>
                 <br/>
-                <select value={this.state.support} onChange={this.handleChange}>
-                    <option value="">Support?</option>
-                    <option value="5">Excellent</option>
-                    <option value="4">Very Good</option>
-                    <option value="3">Good</option>
-                    <option value="2">Fair</option>
-                    <option value="1">Poor</option>
-                </select>
+                <FormControl>
+                <Select value={this.state.support} onChange={this.handleChange}>
+                <MenuItem value=""><em>Support?</em></MenuItem>
+                    <MenuItem value="5">Excellent</MenuItem>
+                    <MenuItem value="4">Very Good</MenuItem>
+                    <MenuItem value="3">Good</MenuItem>
+                    <MenuItem value="2">Fair</MenuItem>
+                    <MenuItem value="1">Poor</MenuItem>
+                </Select>
+                </FormControl>
                 <br/>
                 <br/>
                 <Button size="small" variant="outlined" color="primary" onClick={this.handleClick}>Next</Button>

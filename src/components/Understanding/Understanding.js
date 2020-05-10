@@ -1,5 +1,8 @@
 import React, { Component } from "react";
 import {Button} from '@material-ui/core/';
+import FormControl from '@material-ui/core/FormControl';
+import Select from '@material-ui/core/Select';
+import MenuItem from '@material-ui/core/MenuItem';
 
 
 class Understanding extends Component{
@@ -43,14 +46,16 @@ class Understanding extends Component{
             <div>
                 <h1>How well are you understanding the content?</h1>
                 <br/>
-                <select value={this.state.understanding} onChange={this.handleChange}>
-                    <option value="">Understanding?</option>
-                    <option value="5">Excellent</option>
-                    <option value="4">Very Good</option>
-                    <option value="3">Good</option>
-                    <option value="2">Fair</option>
-                    <option value="1">Poor</option>
-                </select>
+                <FormControl>
+                <Select value={this.state.understanding} onChange={this.handleChange}>
+                <MenuItem value=""><em>Understanding?</em></MenuItem>
+                    <MenuItem value="5">Excellent</MenuItem>
+                    <MenuItem value="4">Very Good</MenuItem>
+                    <MenuItem value="3">Good</MenuItem>
+                    <MenuItem value="2">Fair</MenuItem>
+                    <MenuItem value="1">Poor</MenuItem>
+                </Select>
+                </FormControl>
                 <br/>
                 <br/>
                 <Button size="small" variant="outlined" color="primary" onClick={this.handleClick}>Next</Button>

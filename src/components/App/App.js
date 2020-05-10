@@ -8,6 +8,7 @@ import Support from '../Support/Support';
 import Comments from '../Comments/Comments';
 import Overview from '../Overview/Overview';
 import Thanks from '../Thanks/Thanks';
+import Admin from '../Admin/Admin';
 import { HashRouter, Route } from 'react-router-dom';
 import { connect } from 'react-redux';
 
@@ -34,6 +35,7 @@ class App extends Component {
           <Route path="/comments" render={ (props) => <Comments {...props} dispatch={this.props.dispatch}/>} />
           <Route path="/overview" render={ (props) => <Overview {...props} dispatch={this.props.dispatch} reduxState={this.props.reduxState}/>} />
           <Route path="/thanks" render={ (props) => <Thanks {...props} dispatch={this.props.dispatch}/>} />
+          <Route path="/admin" render={ (props) => <Admin {...props} dispatch={this.props.dispatch} reduxState={this.props.reduxState}/>} />
         </HashRouter>
       </div>
     );

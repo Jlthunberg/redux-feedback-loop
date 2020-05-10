@@ -18,7 +18,7 @@ class Thanks extends Component{
                 <h1>Thank you for your Feedback!</h1>
                 <br/>
                 <br/>
-                <Button size="small" variant="outlined" color="primary" onClick={this.handleClick}>Submit New Feedback</Button>
+                <Button size="small"variant="outlined" color="primary" onClick={this.handleClick}>Submit New Feedback</Button>
             </div>
         ) //end return
     } //end render

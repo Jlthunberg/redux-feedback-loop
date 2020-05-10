@@ -26,9 +26,9 @@ const mainReducer = (state = 0, action) => {
 const storeInstance = createStore(mainReducer);
 
 ReactDOM.render(
-  <React.StrictMode>
-    <Provider store={storeInstance}><App /></Provider>
-  </React.StrictMode>,
+    <Provider store={storeInstance}><App />
+    </Provider>,
+  
   document.getElementById('root')
 );
 registerServiceWorker();

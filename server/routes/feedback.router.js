@@ -19,4 +19,17 @@ router.post('/', (req, res) => {
       })
   })// end POST route
 
+  router.get('/', (req, res) => {
+    const sqlText = `SELECT * FROM feedback ORDER BY id ASC;`;
+    pool.query(sqlText)
+      .then((result) => {
+        //console.log(`Got feedback:`, result);
+        res.send(result.rows);
+      })
+      .catch((error) => {
+        console.log(`Error making database query ${sqlText}`, error);
+        res.sendStatus(500); // Good server always responds
+      })
+  })
+
   module.exports = router;

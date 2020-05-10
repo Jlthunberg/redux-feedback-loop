@@ -40,18 +40,24 @@ class Overview extends Component{
         }
     } //end updateFeedback
 
+    handleClickAdmin = () =>{
+        console.log('clicked admin')
+        this.props.history.push('/admin')
+    }
+
     render(){
         return(
             <div>
                 <h1>Review Your Feedback</h1>
                 <p>If you would like to change your rating please click the "Update" button to go back to that screen.</p>
-                    <p>Feeling: {this.props.reduxState.feeling} <Button size="small" variant="outlined" color="secondary" onClick={() => this.updateFeedback('feeling')}>Update</Button></p>
-                    <p>Understanding: {this.props.reduxState.understanding} <Button size="small" variant="outlined" color="secondary" onClick={() => this.updateFeedback('understanding')}>Update</Button></p>
-                    <p>Support: {this.props.reduxState.support} <Button size="small" variant="outlined" color="secondary" onClick={() => this.updateFeedback('support')}>Update</Button></p>
-                    <p>Comments: {this.props.reduxState.comments} <Button size="small" variant="outlined" color="secondary" onClick={() => this.updateFeedback('comments')}>Update</Button></p>
+                    <p>Feeling: {this.props.reduxState.feeling} <Button size="small" variant="contained" color="secondary" onClick={() => this.updateFeedback('feeling')}>Update</Button></p>
+                    <p>Understanding: {this.props.reduxState.understanding} <Button size="small" variant="contained" color="secondary" onClick={() => this.updateFeedback('understanding')}>Update</Button></p>
+                    <p>Support: {this.props.reduxState.support} <Button size="small" variant="contained" color="secondary" onClick={() => this.updateFeedback('support')}>Update</Button></p>
+                    <p>Comments: {this.props.reduxState.comments} <Button size="small" variant="contained" color="secondary" onClick={() => this.updateFeedback('comments')}>Update</Button></p>
                 <br/>
                 <br/>
-                <Button size="small" variant="outlined" color="primary" onClick={this.handleClick}>SUBMIT</Button>
+                <Button size="small" variant="outlined" color="primary" onClick={this.handleClickAdmin}>ADMIN</Button>
+                <Button size="small" variant="contained" color="primary" onClick={this.handleClick}>SUBMIT</Button>
             </div>
         ) //end return
     } //end render
