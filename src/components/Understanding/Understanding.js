@@ -45,11 +45,11 @@ class Understanding extends Component{
                 <br/>
                 <select value={this.state.understanding} onChange={this.handleChange}>
                     <option value="">Understanding?</option>
-                    <option value="5">Poor</option>
-                    <option value="4">Fair</option>
+                    <option value="5">Excellent</option>
+                    <option value="4">Very Good</option>
                     <option value="3">Good</option>
-                    <option value="2">Very Good</option>
-                    <option value="1">Excellent</option>
+                    <option value="2">Fair</option>
+                    <option value="1">Poor</option>
                 </select>
                 <br/>
                 <br/>

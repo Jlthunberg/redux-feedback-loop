@@ -18,9 +18,9 @@ class Home extends Component {
   render() {
     return (
       <div>
-        <p> Welcome to the daily reflection feedback. There will be 4 questions with
-        about how your week went. Please answer each question and continue on to
-            the proceeding question by clicking the next button.</p>
+        <p className="lineHeight"> Welcome to the daily reflection feedback. There will be 4 questions with
+        about how your week went, please answer with the drop down menu in each question. You can then continue on to
+            the proceeding question by clicking the "Next" button.</p>
         <br />
         <Button variant="outlined" color="primary" onClick={this.handleClick}>Next</Button>
       </div>

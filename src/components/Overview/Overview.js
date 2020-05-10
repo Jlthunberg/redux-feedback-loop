@@ -25,15 +25,30 @@ class Overview extends Component{
         this.props.history.push('/thanks')
     } //end handle click
 
+    updateFeedback = (event) => {
+        if(event === "feeling"){
+            this.props.history.push('/feeling')
+        }
+        else if (event === "understanding") {
+            this.props.history.push('/understanding')
+        }
+        else if (event === "support") {
+            this.props.history.push('/support')
+        }
+        else if (event === "comments") {
+            this.props.history.push('/comments')
+        }
+    } //end updateFeedback
+
     render(){
         return(
             <div>
                 <h1>Review Your Feedback</h1>
                 
-                    <p>Feeling: {this.props.reduxState.feeling}</p>
-                    <p>Understanding:{this.props.reduxState.understanding}</p>
-                    <p>Support:{this.props.reduxState.support}</p>
-                    <p>Comments:{this.props.reduxState.comments}</p>
+                    <p>Feeling: {this.props.reduxState.feeling} <Button variant="outlined" color="secondary" onClick={() => this.updateFeedback('feeling')}>Update</Button></p>
+                    <p>Understanding:{this.props.reduxState.understanding} <Button variant="outlined" color="secondary" onClick={() => this.updateFeedback('understanding')}>Update</Button></p>
+                    <p>Support:{this.props.reduxState.support} <Button variant="outlined" color="secondary" onClick={() => this.updateFeedback('support')}>Update</Button></p>
+                    <p>Comments:{this.props.reduxState.comments} <Button variant="outlined" color="secondary" onClick={() => this.updateFeedback('comments')}>Update</Button></p>
                 <br/>
                 <br/>
                 <Button variant="outlined" color="primary" onClick={this.handleClick}>SUBMIT</Button>
