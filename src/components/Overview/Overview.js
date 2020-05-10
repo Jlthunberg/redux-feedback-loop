@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import {connect} from 'react-redux';
 import axios from 'axios';
+import {Button} from '@material-ui/core/';
 
 
 
@@ -34,7 +35,8 @@ class Overview extends Component{
                     <p>Support:{this.props.reduxState.support}</p>
                     <p>Comments:{this.props.reduxState.comments}</p>
                 <br/>
-                <button onClick={this.handleClick}>SUBMIT</button>
+                <br/>
+                <Button variant="outlined" color="primary" onClick={this.handleClick}>SUBMIT</Button>
             </div>
         ) //end return
     } //end render

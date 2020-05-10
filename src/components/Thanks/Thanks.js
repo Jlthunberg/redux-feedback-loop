@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import {Button} from '@material-ui/core/';
 //use in main app to connect
 //import Thanks from '../Thanks/Thanks';
 
@@ -16,7 +17,8 @@ class Thanks extends Component{
             <div>
                 <h1>Thank you for your Feedback!</h1>
                 <br/>
-                <button onClick={this.handleClick}>Submit New Feedback</button>
+                <br/>
+                <Button variant="outlined" color="primary" onClick={this.handleClick}>Submit New Feedback</Button>
             </div>
         ) //end return
     } //end render

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-
+import {Button} from '@material-ui/core/';
+// import {MuiThemeProvider} from '@material-ui/core/';
 
 class Home extends Component {
 
@@ -21,7 +22,7 @@ class Home extends Component {
         about how your week went. Please answer each question and continue on to
             the proceeding question by clicking the next button.</p>
         <br />
-        <button onClick={this.handleClick}>Next</button>
+        <Button variant="outlined" color="primary" onClick={this.handleClick}>Next</Button>
       </div>
     )
   }

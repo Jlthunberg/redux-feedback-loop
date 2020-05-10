@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-
+import {Button} from '@material-ui/core/';
 
 class Comments extends Component {
     state ={
@@ -33,8 +33,9 @@ class Comments extends Component {
                 <h1>Any additional comments or concerns can be entered here.</h1>
                 <p>Comments(if you do not have any please write "none")</p>
                 <input type="text" value={this.state.comments} onChange={this.handleChange}/>
-                <br />
-                <button onClick={this.handleClick}>Next</button>
+                <br/>
+                <br/>
+                <Button variant="outlined" color="primary" onClick={this.handleClick}>Next</Button>
             </div>
         ) //end return
     } //end render

@@ -39,7 +39,8 @@ class Feeling extends Component {
         return (
             <div>
                 <h1>How are you feeling today?</h1>
-                <br/>
+
+                <label>Feeling?</label> <br/>
                 <select value={this.state.feeling} onChange={this.handleChange}>
                     <option value="">Feeling?</option>
                     <option value="5">Poor</option>
@@ -48,7 +49,7 @@ class Feeling extends Component {
                     <option value="2">Very Good</option>
                     <option value="1">Excellent</option>
                 </select>
-                <br/>
+
                 <br/>
                 <Button variant="outlined" color="primary" onClick={this.handleClick}>Next</Button>
             </div>

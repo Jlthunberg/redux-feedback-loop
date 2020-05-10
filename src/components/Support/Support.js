@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-
+import {Button} from '@material-ui/core/';
 
 class Support extends Component {
     state = {
@@ -44,17 +44,18 @@ class Support extends Component {
         return (
             <div>
                 <h1>How well are you being supported?</h1>
-                <label>Support?</label> <br />
+                <br/>
                 <select value={this.state.support} onChange={this.handleChange}>
                     <option value="">Support?</option>
-                    <option value="5">5</option>
-                    <option value="4">4</option>
-                    <option value="3">3</option>
-                    <option value="2">2</option>
-                    <option value="1">1</option>
+                    <option value="5">Poor</option>
+                    <option value="4">Fair</option>
+                    <option value="3">Good</option>
+                    <option value="2">Very Good</option>
+                    <option value="1">Excellent</option>
                 </select>
-                <br />
-                <button onClick={this.handleClick}>Next</button>
+                <br/>
+                <br/>
+                <Button variant="outlined" color="primary" onClick={this.handleClick}>Next</Button>
             </div>
         ) //end return
     } //end render
