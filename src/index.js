@@ -5,19 +5,35 @@ import App from './components/App/App';
 import registerServiceWorker from './registerServiceWorker';
 
 
-import {createStore} from 'redux';
-import { Provider} from 'react-redux';
+import { createStore } from 'redux';
+import { Provider } from 'react-redux';
 
+const mainReducerInitialState = 0;
 
-const firstReducerInitialState = 0;
+const mainReducer = (state = mainReducerInitialState, action) => {
+  console.log('in mainReducer', 'state:', state, 'action:', action);
+  if (action.type === 'NEW_FEELING') {
+    console.log('main reducer with', action.type, state)
+    return { ...state, feeling: action.payload }
+  }
+  else if (action.type === 'NEW_UNDERSTANDING') {
+    console.log('main reducer with', action.type, state)
+    return { ...state, understanding: action.payload }
+  }
+  else if (action.type === 'NEW_SUPPORT') {
+    console.log('main reducer with', action.type, state)
+    return { ...state, support: action.payload }
+  }
+  else if (action.type === 'NEW_COMMENT') {
+    console.log('main reducer with', action.type, state)
+    return { ...state, comments: action.payload }
+  }
+  return state;
 
-const firstReducer = ( state = firstReducerInitialState, action) => {
-  console.log('in firstReducer', 'state:', state, 'action:', action);
- 
-} // end firstReducer
+} // end mainReducer
 
-//create a storage space for redux data, tell it to use our reducer
-const storeInstance = createStore( firstReducer);
+const storeInstance = createStore(mainReducer);
+// , window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 
 ReactDOM.render(
   <React.StrictMode>
@@ -26,5 +42,4 @@ ReactDOM.render(
   document.getElementById('root')
 );
 
-ReactDOM.render(<App />, document.getElementById('root'));
 registerServiceWorker();

@@ -13,13 +13,19 @@ class Understanding extends Component{
 
     handleClick = () => {
         console.log('clicked next in understanding')
-        if(this.state.understanding == ''){
-            //do this thing
-            this.props.dispatch({
-                type: 'NEW_UNDERSTANDING',
-                payload: this.state.understanding,
-            })  
-        }
+        // if(this.state.understanding == ''){
+        //     //do this thing
+        //     this.props.dispatch({
+        //         type: 'NEW_UNDERSTANDING',
+        //         payload: this.state.understanding,
+        //     })  
+        // }
+
+        this.props.dispatch({
+            type: 'NEW_UNDERSTANDING',
+            payload: this.state.understanding,
+        })
+
         this.props.history.push('/support')
       }//end handle click
 

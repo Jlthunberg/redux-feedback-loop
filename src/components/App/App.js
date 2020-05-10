@@ -7,7 +7,9 @@ import Understanding from '../Understanding/Understanding';
 import Support from '../Support/Support';
 import Comments from '../Comments/Comments';
 import Overview from '../Overview/Overview';
+import Thanks from '../Thanks/Thanks';
 import { HashRouter, Route } from 'react-router-dom';
+import { connect } from 'react-redux';
 
 class App extends Component {
   componentDidMount(){
@@ -31,10 +33,13 @@ class App extends Component {
           <Route path="/support" render={ (props) => <Support {...props} dispatch={this.props.dispatch}/>} />
           <Route path="/comments" render={ (props) => <Comments {...props} dispatch={this.props.dispatch}/>} />
           <Route path="/overview" render={ (props) => <Overview {...props} dispatch={this.props.dispatch}/>} />
+          <Route path="/thanks" render={ (props) => <Thanks {...props} dispatch={this.props.dispatch}/>} />
         </HashRouter>
       </div>
     );
   }
 }
 
-export default App;
+const putReduxStateOnProps = (reduxState) => ({ reduxState });
+export default connect(putReduxStateOnProps)(App);
+// export default App;

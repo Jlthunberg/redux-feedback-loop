@@ -1,16 +1,16 @@
 import React, { Component } from "react";
 //use in main app to connect
-//import _template from '../_template/_template';
+//import Thanks from '../Thanks/Thanks';
 
 
-class _template extends Component{
+class Thanks extends Component{
     render(){
         return(
             <div>
-                <h1>_template</h1>
+                <h1>Thanks</h1>
             </div>
         ) //end return
     } //end render
 } //end class
 
-export default _template;
+export default Thanks;

@@ -11,12 +11,16 @@ class Feeling extends Component {
 
     handleClick = () => {
         console.log('clicked next in feeling');
-        if(this.state.feeling == ''){
-            this.props.dispatch({
-                type: 'NEW_FEELING',
-                payload: this.state.feeling,
-            })  
-        }
+        // if(this.state.feeling == ''){
+        //     this.props.dispatch({
+        //         type: 'NEW_FEELING',
+        //         payload: this.state.feeling,
+        //     })  
+        // }
+        this.props.dispatch({
+            type: 'NEW_FEELING',
+            payload: this.state.feeling,
+        }) 
 
         this.props.history.push('/understanding') //sends to next page understanding question
       }//end handle click

@@ -13,14 +13,20 @@ class Support extends Component{
 
     handleClick = () => {
         console.log('clicked next in support')
-        if(this.state.support == ''){
-            // alert('Please choose a value from 1-5, then press Next. Thank you');
-            //do this thing
-            this.props.dispatch({
-                type: 'NEW_SUPPORT',
-                payload: this.state.support,
-            })  
-        }
+        // if(this.state.support == ''){
+        //     alert('Please choose a value from 1-5, then press Next. Thank you');
+        //     //do this thing
+        //     // this.props.dispatch({
+        //     //     type: 'NEW_SUPPORT',
+        //     //     payload: this.state.support,
+        //     // })  
+        // }
+
+        this.props.dispatch({
+            type: 'NEW_UNDERSTANDING',
+            payload: this.state.understanding,
+        })
+        
         this.props.history.push('/comments')
       }//end handle click
 
