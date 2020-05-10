@@ -55,7 +55,7 @@ class Support extends Component {
                 </select>
                 <br/>
                 <br/>
-                <Button variant="outlined" color="primary" onClick={this.handleClick}>Next</Button>
+                <Button size="small" variant="outlined" color="primary" onClick={this.handleClick}>Next</Button>
             </div>
         ) //end return
     } //end render

@@ -44,14 +44,16 @@ class Overview extends Component{
         return(
             <div>
                 <h1>Review Your Feedback</h1>
+                {/* <p> Rating 5= Excellent, 4= Very Good, 3= Good, 2= Fair, 1= Poor.</p> */}
+                <p>If you would like to change your rating please click the "Update" button to go back to that screen.</p>
                 
-                    <p>Feeling: {this.props.reduxState.feeling} <Button variant="outlined" color="secondary" onClick={() => this.updateFeedback('feeling')}>Update</Button></p>
-                    <p>Understanding:{this.props.reduxState.understanding} <Button variant="outlined" color="secondary" onClick={() => this.updateFeedback('understanding')}>Update</Button></p>
-                    <p>Support:{this.props.reduxState.support} <Button variant="outlined" color="secondary" onClick={() => this.updateFeedback('support')}>Update</Button></p>
-                    <p>Comments:{this.props.reduxState.comments} <Button variant="outlined" color="secondary" onClick={() => this.updateFeedback('comments')}>Update</Button></p>
+                    <p>Feeling: {this.props.reduxState.feeling} <Button size="small" variant="outlined" color="secondary" onClick={() => this.updateFeedback('feeling')}>Update</Button></p>
+                    <p>Understanding: {this.props.reduxState.understanding} <Button size="small" variant="outlined" color="secondary" onClick={() => this.updateFeedback('understanding')}>Update</Button></p>
+                    <p>Support: {this.props.reduxState.support} <Button size="small" variant="outlined" color="secondary" onClick={() => this.updateFeedback('support')}>Update</Button></p>
+                    <p>Comments: {this.props.reduxState.comments} <Button size="small" variant="outlined" color="secondary" onClick={() => this.updateFeedback('comments')}>Update</Button></p>
                 <br/>
                 <br/>
-                <Button variant="outlined" color="primary" onClick={this.handleClick}>SUBMIT</Button>
+                <Button size="small" variant="outlined" color="primary" onClick={this.handleClick}>SUBMIT</Button>
             </div>
         ) //end return
     } //end render

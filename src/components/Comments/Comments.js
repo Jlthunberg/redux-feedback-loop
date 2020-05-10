@@ -35,7 +35,7 @@ class Comments extends Component {
                 <input type="text" value={this.state.comments} onChange={this.handleChange}/>
                 <br/>
                 <br/>
-                <Button variant="outlined" color="primary" onClick={this.handleClick}>Next</Button>
+                <Button size="small" variant="outlined" color="primary" onClick={this.handleClick}>Next</Button>
             </div>
         ) //end return
     } //end render
