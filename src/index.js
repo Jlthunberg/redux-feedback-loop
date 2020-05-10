@@ -21,7 +21,6 @@ const mainReducer = (state = 0, action) => {
     return { ...state, comments: action.payload }
   }
   return state;
-
 } // end mainReducer
 
 const storeInstance = createStore(mainReducer);

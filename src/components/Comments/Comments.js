@@ -31,7 +31,7 @@ class Comments extends Component {
         return (
             <div>
                 <h1>Any additional comments or concerns can be entered here.</h1>
-                <p>Comments(if you do not have any please write "none")</p>
+                <p>Comments</p>
                 <input type="text" value={this.state.comments} onChange={this.handleChange}/>
                 <br/>
                 <br/>
