@@ -19,7 +19,7 @@ router.post('/', (req, res) => {
       })
   })// end POST route
 
-  router.get('/', (req, res) => {
+  router.get('/admin', (req, res) => {
     const sqlText = `SELECT * FROM feedback ORDER BY id ASC;`;
     pool.query(sqlText)
       .then((result) => {
