@@ -1,10 +1,6 @@
-# Project Name
-
-[Project Instructions](./INSTRUCTIONS.md), this line may be removed once you have updated the README.md
+# Redux Feedback Loop
 
 ## Description
+This is a redux feedback loop that takes in information on each component page via question. The question data will then be stored and submitted on the last page. 
 
-Your project description goes here. What problem did you solve? How did you solve it?
-
-Additional README details can be found [here](https://github.com/PrimeAcademy/readme-template/blob/master/README.md).
-# redux-feedback-loop
+<img src="ProjectImages/57image1.png"/>
